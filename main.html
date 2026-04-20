@@ -405,6 +405,11 @@
                 min-height: 54px;
             }
         }
+        
+        #timer {
+            font-size: 20px;
+            font-weight: bold;
+        }
     </style>
 </head>
 
@@ -419,13 +424,13 @@
         <div class="tech-divider"></div>
 
         <div class="tech-badges">
-            <span class="badge">🤖 AI/ML</span>
-            <span class="badge">📊 DATA</span>
-            <span class="badge">⚙️ LEARNING</span>
+            <span class="badge"> AI/ML</span>
+            <span class="badge"> DATA</span>
+            <span class="badge"> LEARNING</span>
         </div>
 
         <div class="details-box">
-            📅 <strong>26 APRIL, 2026</strong> <br /> 🕓 <strong>04:00 PM - 05:00 PM</strong>
+            📅 <strong>03 MAY, 2026</strong> <br /> <strong><div id="timer"></div></strong>
         </div>
 
         <form id="registrationForm">
@@ -488,7 +493,34 @@
                     window.location.href = whatsappGroupLink;
                 }, 1200);
             });
+        // Set target date (IMPORTANT: Month is 0-based, so May = 4)
+        const targetDate = new Date("May 3, 2026 17:00:00").getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const diff = targetDate - now;
+
+            if (diff <= 0) {
+                document.getElementById("timer").innerHTML = "Time's Up!";
+                return;
+            }
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((diff / (1000 * 60)) % 60);
+            const seconds = Math.floor((diff / 1000) % 60);
+
+            document.getElementById("timer").innerHTML =
+                days + "d " +
+                hours + "h " +
+                minutes + "m " +
+                seconds + "s ";
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
     </script>
+
 </body>
 
 </html>

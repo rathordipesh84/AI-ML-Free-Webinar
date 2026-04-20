@@ -1,507 +1,522 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Online AI & ML FREE WEBINAR 2026</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .container {
+        background: white;
+        max-width: 1000px;
+        width: 100%;
+        border-radius: 20px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        animation: slideIn 0.8s ease-out;
+      }
+
+      @keyframes slideIn {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
         }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
+        to {
+          opacity: 1;
+          transform: translateY(0);
         }
-        
+      }
+
+      .left-section {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 50px 40px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .left-section::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        right: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.1) 1px,
+          transparent 1px
+        );
+        background-size: 50px 50px;
+        animation: float 20s linear infinite;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translate(0, 0);
+        }
+        100% {
+          transform: translate(50px, 50px);
+        }
+      }
+
+      .left-section > * {
+        position: relative;
+        z-index: 2;
+      }
+
+      .dots-top {
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 20px;
+        letter-spacing: 10px;
+        opacity: 0.7;
+      }
+
+      .title {
+        font-size: 28px;
+        font-weight: 300;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      .title-main {
+        font-size: 48px;
+        font-weight: 800;
+        margin-bottom: 30px;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+
+      .description {
+        font-size: 15px;
+        line-height: 1.8;
+        margin-bottom: 40px;
+        text-align: center;
+        font-weight: 500;
+        opacity: 0.95;
+      }
+
+      .teacher-image {
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 20px auto;
+        border: 5px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        animation: scaleIn 0.8s ease-out;
+      }
+
+      @keyframes scaleIn {
+        from {
+          opacity: 0;
+          transform: scale(0.8);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      .teacher-label {
+        font-size: 12px;
+        text-align: center;
+        margin-top: 15px;
+        opacity: 0.9;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+
+      .right-section {
+        padding: 50px 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .event-details {
+        background: linear-gradient(135deg, #f5f7ff 0%, #f0e7ff 100%);
+        padding: 30px;
+        border-radius: 15px;
+        margin-bottom: 30px;
+        border-left: 5px solid #667eea;
+      }
+
+      .detail-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        font-size: 16px;
+        color: #333;
+        font-weight: 600;
+      }
+
+      .detail-item:last-child {
+        margin-bottom: 0;
+      }
+
+      .detail-icon {
+        font-size: 30px;
+        margin-right: 15px;
+        min-width: 40px;
+      }
+
+      .cta-button {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+        padding: 18px 30px;
+        border-radius: 50px;
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.4s ease;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        margin-bottom: 20px;
+        text-align: center;
+        display: block;
+      }
+
+      .cta-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 30px rgba(102, 126, 234, 0.6);
+      }
+
+      .contact-info {
+        background: #f8f9fa;
+        padding: 25px;
+        border-radius: 15px;
+        text-align: center;
+      }
+
+      .contact-label {
+        font-size: 13px;
+        color: #999;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+
+      .contact-value {
+        font-size: 18px;
+        color: #333;
+        font-weight: 700;
+        margin-bottom: 15px;
+      }
+
+      .contact-value a {
+        color: #667eea;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .contact-value a:hover {
+        color: #764ba2;
+      }
+
+      .divider {
+        height: 1px;
+        background: #ddd;
+        margin: 15px 0;
+      }
+
+      .website {
+        font-size: 16px;
+        color: #667eea;
+        font-weight: 600;
+      }
+
+      .features {
+        background: #f8f9fa;
+        padding: 20px;
+        border-radius: 12px;
+        margin-top: 20px;
+      }
+
+      .feature-title {
+        font-size: 13px;
+        color: #999;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 12px;
+        font-weight: 700;
+      }
+
+      .feature-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .feature-item {
+        font-size: 14px;
+        color: #555;
+        display: flex;
+        align-items: center;
+      }
+
+      .feature-item::before {
+        content: "✓";
+        color: #667eea;
+        font-weight: 700;
+        margin-right: 10px;
+        font-size: 16px;
+      }
+
+      @media (max-width: 480px) {
         .container {
-            background: white;
-            max-width: 1000px;
-            width: 100%;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            animation: slideIn 0.8s ease-out;
+          grid-template-columns: 1fr;
+          max-width: 100%;
         }
-        
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
         .left-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 50px 40px;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
+          padding: 30px 20px;
         }
-        
-        .left-section::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-            background-size: 50px 50px;
-            animation: float 20s linear infinite;
-        }
-        
-        @keyframes float {
-            0% {
-                transform: translate(0, 0);
-            }
-            100% {
-                transform: translate(50px, 50px);
-            }
-        }
-        
-        .left-section>* {
-            position: relative;
-            z-index: 2;
-        }
-        
-        .dots-top {
-            text-align: center;
-            font-size: 20px;
-            margin-bottom: 20px;
-            letter-spacing: 10px;
-            opacity: 0.7;
-        }
-        
-        .title {
-            font-size: 28px;
-            font-weight: 300;
-            margin-bottom: 10px;
-            text-align: center;
-        }
-        
-        .title-main {
-            font-size: 48px;
-            font-weight: 800;
-            margin-bottom: 30px;
-            text-align: center;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        
-        .description {
-            font-size: 15px;
-            line-height: 1.8;
-            margin-bottom: 40px;
-            text-align: center;
-            font-weight: 500;
-            opacity: 0.95;
-        }
-        
-        .teacher-image {
-            width: 220px;
-            height: 220px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin: 20px auto;
-            border: 5px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            animation: scaleIn 0.8s ease-out;
-        }
-        
-        @keyframes scaleIn {
-            from {
-                opacity: 0;
-                transform: scale(0.8);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-        
-        .teacher-label {
-            font-size: 12px;
-            text-align: center;
-            margin-top: 15px;
-            opacity: 0.9;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            font-weight: 600;
-        }
-        
         .right-section {
-            padding: 50px 40px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+          padding: 30px 20px;
         }
-        
+        .dots-top {
+          font-size: 16px;
+          letter-spacing: 8px;
+          margin-bottom: 15px;
+        }
+        .title {
+          font-size: 22px;
+          margin-bottom: 8px;
+        }
+        .title-main {
+          font-size: 26px;
+          margin-bottom: 20px;
+        }
+        .teacher-image {
+          width: 160px;
+          height: 160px;
+          margin: 15px auto;
+        }
+        .teacher-label {
+          font-size: 10px;
+          margin-top: 12px;
+        }
+        .description {
+          font-size: 13px;
+          margin-bottom: 25px;
+        }
         .event-details {
-            background: linear-gradient(135deg, #f5f7ff 0%, #f0e7ff 100%);
-            padding: 30px;
-            border-radius: 15px;
-            margin-bottom: 30px;
-            border-left: 5px solid #667eea;
+          padding: 20px;
+          margin-bottom: 20px;
         }
-        
         .detail-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-            font-size: 16px;
-            color: #333;
-            font-weight: 600;
+          font-size: 14px;
+          margin-bottom: 15px;
         }
-        
-        .detail-item:last-child {
-            margin-bottom: 0;
-        }
-        
         .detail-icon {
-            font-size: 30px;
-            margin-right: 15px;
-            min-width: 40px;
+          font-size: 24px;
+          margin-right: 12px;
         }
-        
         .cta-button {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
-            padding: 18px 30px;
-            border-radius: 50px;
-            font-size: 16px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.4s ease;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
-            margin-bottom: 20px;
-            text-align: center;
-            display: block;
+          padding: 14px 25px;
+          font-size: 14px;
+          letter-spacing: 1px;
+          margin-bottom: 15px;
         }
-        
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(102, 126, 234, 0.6);
-        }
-        
         .contact-info {
-            background: #f8f9fa;
-            padding: 25px;
-            border-radius: 15px;
-            text-align: center;
+          padding: 20px;
         }
-        
         .contact-label {
-            font-size: 13px;
-            color: #999;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 10px;
-            font-weight: 700;
+          font-size: 11px;
         }
-        
         .contact-value {
-            font-size: 18px;
-            color: #333;
-            font-weight: 700;
-            margin-bottom: 15px;
+          font-size: 16px;
         }
-        
-        .contact-value a {
-            color: #667eea;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        
-        .contact-value a:hover {
-            color: #764ba2;
-        }
-        
-        .divider {
-            height: 1px;
-            background: #ddd;
-            margin: 15px 0;
-        }
-        
         .website {
-            font-size: 16px;
-            color: #667eea;
-            font-weight: 600;
+          font-size: 14px;
         }
-        
         .features {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 12px;
-            margin-top: 20px;
+          padding: 15px;
+          margin-top: 15px;
         }
-        
         .feature-title {
-            font-size: 13px;
-            color: #999;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 12px;
-            font-weight: 700;
+          font-size: 11px;
         }
-        
-        .feature-list {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        
         .feature-item {
-            font-size: 14px;
-            color: #555;
-            display: flex;
-            align-items: center;
+          font-size: 13px;
         }
-        
-        .feature-item::before {
-            content: '✓';
-            color: #667eea;
-            font-weight: 700;
-            margin-right: 10px;
-            font-size: 16px;
+      }
+
+      @media (min-width: 481px) and (max-width: 600px) {
+        .container {
+          grid-template-columns: 1fr;
         }
-        
-        @media (max-width: 480px) {
-            .container {
-                grid-template-columns: 1fr;
-                max-width: 100%;
-            }
-            .left-section {
-                padding: 30px 20px;
-            }
-            .right-section {
-                padding: 30px 20px;
-            }
-            .dots-top {
-                font-size: 16px;
-                letter-spacing: 8px;
-                margin-bottom: 15px;
-            }
-            .title {
-                font-size: 22px;
-                margin-bottom: 8px;
-            }
-            .title-main {
-                font-size: 26px;
-                margin-bottom: 20px;
-            }
-            .teacher-image {
-                width: 160px;
-                height: 160px;
-                margin: 15px auto;
-            }
-            .teacher-label {
-                font-size: 10px;
-                margin-top: 12px;
-            }
-            .description {
-                font-size: 13px;
-                margin-bottom: 25px;
-            }
-            .event-details {
-                padding: 20px;
-                margin-bottom: 20px;
-            }
-            .detail-item {
-                font-size: 14px;
-                margin-bottom: 15px;
-            }
-            .detail-icon {
-                font-size: 24px;
-                margin-right: 12px;
-            }
-            .cta-button {
-                padding: 14px 25px;
-                font-size: 14px;
-                letter-spacing: 1px;
-                margin-bottom: 15px;
-            }
-            .contact-info {
-                padding: 20px;
-            }
-            .contact-label {
-                font-size: 11px;
-            }
-            .contact-value {
-                font-size: 16px;
-            }
-            .website {
-                font-size: 14px;
-            }
-            .features {
-                padding: 15px;
-                margin-top: 15px;
-            }
-            .feature-title {
-                font-size: 11px;
-            }
-            .feature-item {
-                font-size: 13px;
-            }
+        .left-section {
+          padding: 35px 25px;
         }
-        
-        @media (min-width: 481px) and (max-width: 600px) {
-            .container {
-                grid-template-columns: 1fr;
-            }
-            .left-section {
-                padding: 35px 25px;
-            }
-            .right-section {
-                padding: 35px 25px;
-            }
-            .title-main {
-                font-size: 32px;
-            }
-            .teacher-image {
-                width: 180px;
-                height: 180px;
-            }
+        .right-section {
+          padding: 35px 25px;
         }
-        
-        @media (min-width: 601px) and (max-width: 768px) {
-            .container {
-                grid-template-columns: 1fr 1fr;
-            }
-            .left-section {
-                padding: 40px 30px;
-            }
-            .right-section {
-                padding: 40px 30px;
-            }
-            .title-main {
-                font-size: 36px;
-            }
-            .teacher-image {
-                width: 190px;
-                height: 190px;
-            }
+        .title-main {
+          font-size: 32px;
         }
-        
-        @media (min-width: 769px) and (max-width: 900px) {
-            .container {
-                grid-template-columns: 1fr 1fr;
-                max-width: 900px;
-            }
-            .left-section {
-                padding: 45px 35px;
-            }
-            .right-section {
-                padding: 45px 35px;
-            }
-            .title-main {
-                font-size: 40px;
-            }
-            .teacher-image {
-                width: 200px;
-                height: 200px;
-            }
+        .teacher-image {
+          width: 180px;
+          height: 180px;
         }
-        
-        @media (min-width: 901px) and (max-width: 1200px) {
-            .container {
-                max-width: 950px;
-            }
+      }
+
+      @media (min-width: 601px) and (max-width: 768px) {
+        .container {
+          grid-template-columns: 1fr 1fr;
         }
-        
-        @media (min-width: 1201px) {
-            .container {
-                max-width: 1100px;
-                grid-template-columns: 1fr 1fr;
-            }
-            .left-section {
-                padding: 60px 50px;
-            }
-            .right-section {
-                padding: 60px 50px;
-            }
-            .title-main {
-                font-size: 48px;
-            }
-            .teacher-image {
-                width: 230px;
-                height: 230px;
-            }
+        .left-section {
+          padding: 40px 30px;
         }
+        .right-section {
+          padding: 40px 30px;
+        }
+        .title-main {
+          font-size: 36px;
+        }
+        .teacher-image {
+          width: 190px;
+          height: 190px;
+        }
+      }
+
+      @media (min-width: 769px) and (max-width: 900px) {
+        .container {
+          grid-template-columns: 1fr 1fr;
+          max-width: 900px;
+        }
+        .left-section {
+          padding: 45px 35px;
+        }
+        .right-section {
+          padding: 45px 35px;
+        }
+        .title-main {
+          font-size: 40px;
+        }
+        .teacher-image {
+          width: 200px;
+          height: 200px;
+        }
+      }
+
+      @media (min-width: 901px) and (max-width: 1200px) {
+        .container {
+          max-width: 950px;
+        }
+      }
+
+      @media (min-width: 1201px) {
+        .container {
+          max-width: 1100px;
+          grid-template-columns: 1fr 1fr;
+        }
+        .left-section {
+          padding: 60px 50px;
+        }
+        .right-section {
+          padding: 60px 50px;
+        }
+        .title-main {
+          font-size: 48px;
+        }
+        .teacher-image {
+          width: 230px;
+          height: 230px;
+        }
+      }
     </style>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <div class="container">
-        <div class="left-section">
-            <div class="dots-top">· · · · · ·</div>
-            <div class="title">Online</div>
-            <div class="title-main">AI & ML FREE<br>WEBINAR</div>
-            <img src="teacher.png" alt="AI Instructor" class="teacher-image">
-            <div class="teacher-label">🎓 Expert Instructor</div>
-            <div class="description">Don't miss this golden opportunity! Register now for Online AI & ML Free Webinar and improve your technical knowledge!</div>
+      <div class="left-section">
+        <div class="dots-top">· · · · · ·</div>
+        <div class="title">Online</div>
+        <div class="title-main">AI & ML FREE<br />WEBINAR</div>
+        <img src="teacher.png" alt="AI Instructor" class="teacher-image" />
+        <div class="teacher-label">🎓 Expert Instructor</div>
+        <div class="description">
+          Don't miss this golden opportunity! Register now for Online AI & ML
+          Free Webinar and improve your technical knowledge!
+        </div>
+      </div>
+
+      <div class="right-section">
+        <div class="event-details">
+          <div class="detail-item">
+            <div class="detail-icon">
+              <i class="fa-solid fa-calendar-days"></i>
+            </div>
+            <div><strong>Date:</strong> 03 May, 2026</div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-icon"><i class="fa-regular fa-clock"></i></div>
+            <div><strong>Time:</strong> 04:00 PM - 05:00 PM</div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-icon">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div><strong>Mode:</strong> Online Webinar</div>
+          </div>
         </div>
 
-        <div class="right-section">
-            <div class="event-details">
-                <div class="detail-item">
-                    <div class="detail-icon">📅</div>
-                    <div><strong>Date:</strong> 26 April, 2026</div>
-                </div>
-                <div class="detail-item">
-                    <div class="detail-icon">🕐</div>
-                    <div><strong>Time:</strong> 04:00 PM - 05:00 PM</div>
-                </div>
-                <div class="detail-item">
-                    <div class="detail-icon">📍</div>
-                    <div><strong>Mode:</strong> Online Webinar</div>
-                </div>
-            </div>
+        <a href="main.html" class="cta-button">Join Now & Register</a>
 
-            <a href="main.html" class="cta-button">Join Now & Register</a>
-
-            <div class="contact-info">
-                <div class="contact-label">Contact Information</div>
-                <div class="contact-value">
-                    <a href="tel:+919993438480">+91-9993438480</a>
-                </div>
-                <div class="divider"></div>
-                <div class="website">www.reallygreatsite.com</div>
-            </div>
-
-            <div class="features">
-                <div class="feature-title">Why Join?</div>
-                <div class="feature-list">
-                    <div class="feature-item">Industry Expert Trainers</div>
-                    <div class="feature-item">100% Free & Certificate Included</div>
-                    <div class="feature-item">Hands-On Project Experience</div>
-                    <div class="feature-item">Q&A Session with Experts</div>
-                </div>
-            </div>
+        <div class="contact-info">
+          <div class="contact-label">Contact Information</div>
+          <div class="contact-value">
+            <a href="tel:+919993438480">+91-9993438480</a>
+            <a href="mailto:RATHORDIPESH84@GMAIL.COM"
+              >RATHORDIPESH84@GMAIL.COM</a
+            >
+          </div>
         </div>
+
+        <div class="features">
+          <div class="feature-title">Why Join?</div>
+          <div class="feature-list">
+            <div class="feature-item">Industry Expert Trainers</div>
+            <div class="feature-item">100% Free & Certificate Included</div>
+            <div class="feature-item">Hands-On Project Experience</div>
+            <div class="feature-item">Q&A Session with Experts</div>
+          </div>
+        </div>
+      </div>
     </div>
-
-</body>
-
+  </body>
 </html>
