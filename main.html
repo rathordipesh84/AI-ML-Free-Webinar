@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI & ML Free Webinar 2026 - Registration</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            max-width: 550px;
+            width: 100%;
+            padding: 50px 40px;
+            border-radius: 20px;
+            border: none;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            animation: slideIn 0.8s ease-out;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .tech-header {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 13px;
+            color: #667eea;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+        
+        h1 {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 5px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        
+        p.subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 25px;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        
+        .tech-divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #667eea, transparent);
+            margin-bottom: 30px;
+        }
+        
+        .details-box {
+            background: linear-gradient(135deg, #f5f7ff 0%, #f0e7ff 100%);
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 15px;
+            color: #333;
+            border-left: 5px solid #667eea;
+            font-weight: 600;
+            line-height: 1.8;
+        }
+        
+        .details-box strong {
+            color: #667eea;
+            font-weight: 700;
+        }
+        
+        .tech-badges {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .badge {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 700;
+            color: #333;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        input,
+        select {
+            width: 100%;
+            padding: 14px 16px;
+            margin-bottom: 20px;
+            border: 2px solid #e0e0e0;
+            background: white;
+            border-radius: 8px;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            font-family: inherit;
+            color: #333;
+        }
+        
+        input::placeholder,
+        select::placeholder {
+            color: #999;
+        }
+        
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: #667eea;
+            background-color: #f8f9ff;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        button {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(102, 126, 234, 0.6);
+        }
+        
+        button:active {
+            transform: translateY(-1px);
+        }
+        
+        button:disabled {
+            background: linear-gradient(135deg, #ccc 0%, #999 100%);
+            cursor: not-allowed;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transform: none;
+        }
+        
+        #success-message {
+            display: none;
+            text-align: center;
+            color: #2e7d32;
+            font-weight: 700;
+            margin-top: 20px;
+            animation: fadeIn 0.6s ease;
+            font-size: 15px;
+            letter-spacing: 1px;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        .footer-text {
+            text-align: center;
+            font-size: 12px;
+            color: #999;
+            margin-top: 20px;
+            letter-spacing: 0.5px;
+        }
+        /* Mobile Phones (320px - 480px) */
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 25px 18px;
+                border-radius: 15px;
+                max-width: 100%;
+            }
+            .tech-header {
+                font-size: 11px;
+                margin-bottom: 8px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            p.subtitle {
+                font-size: 13px;
+                margin-bottom: 20px;
+            }
+            .tech-divider {
+                height: 1.5px;
+                margin-bottom: 20px;
+            }
+            .tech-badges {
+                gap: 6px;
+                margin-bottom: 20px;
+            }
+            .badge {
+                padding: 6px 11px;
+                font-size: 10px;
+            }
+            .details-box {
+                padding: 18px;
+                font-size: 14px;
+                line-height: 1.7;
+                margin-bottom: 22px;
+            }
+            label {
+                font-size: 11px;
+                margin-bottom: 6px;
+            }
+            input,
+            select {
+                padding: 12px 13px;
+                margin-bottom: 16px;
+                font-size: 14px;
+                border-radius: 6px;
+            }
+            button {
+                font-size: 13px;
+                padding: 13px;
+                border-radius: 6px;
+                min-height: 46px;
+            }
+            #success-message {
+                font-size: 13px;
+                margin-top: 15px;
+            }
+            .footer-text {
+                font-size: 11px;
+                margin-top: 15px;
+            }
+        }
+        /* Small Tablets (481px - 600px) */
+        
+        @media (min-width: 481px) and (max-width: 600px) {
+            .container {
+                padding: 35px 25px;
+                max-width: 100%;
+            }
+            h1 {
+                font-size: 28px;
+            }
+            p.subtitle {
+                font-size: 14px;
+            }
+            .tech-badges {
+                gap: 8px;
+            }
+            .badge {
+                padding: 7px 13px;
+                font-size: 11px;
+            }
+            .details-box {
+                padding: 22px;
+                font-size: 15px;
+            }
+            label {
+                font-size: 12px;
+            }
+            input,
+            select {
+                padding: 13px 14px;
+                font-size: 14px;
+            }
+            button {
+                font-size: 14px;
+                padding: 14px;
+            }
+        }
+        /* Medium Tablets (601px - 768px) */
+        
+        @media (min-width: 601px) and (max-width: 768px) {
+            .container {
+                max-width: 540px;
+                padding: 45px 35px;
+            }
+            h1 {
+                font-size: 32px;
+            }
+        }
+        /* Large Tablets (769px - 900px) */
+        
+        @media (min-width: 769px) and (max-width: 900px) {
+            .container {
+                max-width: 560px;
+                padding: 45px 38px;
+            }
+            h1 {
+                font-size: 34px;
+            }
+        }
+        /* Small Laptops/Desktops (901px - 1200px) */
+        
+        @media (min-width: 901px) and (max-width: 1200px) {
+            .container {
+                max-width: 560px;
+                padding: 50px 40px;
+            }
+            h1 {
+                font-size: 36px;
+            }
+        }
+        /* Medium Laptops (1201px - 1400px) */
+        
+        @media (min-width: 1201px) and (max-width: 1400px) {
+            body {
+                padding: 20px;
+            }
+            .container {
+                max-width: 600px;
+                padding: 55px 45px;
+            }
+            h1 {
+                font-size: 38px;
+            }
+        }
+        /* Large Laptops (1401px and above) */
+        
+        @media (min-width: 1401px) {
+            body {
+                padding: 30px;
+            }
+            .container {
+                max-width: 650px;
+                padding: 60px 50px;
+            }
+            h1 {
+                font-size: 40px;
+            }
+            .tech-header {
+                font-size: 14px;
+            }
+            .badge {
+                padding: 9px 16px;
+                font-size: 13px;
+            }
+            .details-box {
+                padding: 28px;
+                font-size: 16px;
+            }
+            label {
+                font-size: 14px;
+            }
+            input,
+            select {
+                padding: 15px 17px;
+                font-size: 16px;
+            }
+            button {
+                padding: 18px;
+                font-size: 16px;
+                min-height: 54px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="tech-header">🎓 AI & ML WEBINAR 2026</div>
+        <h1>Register Now</h1>
+        <p class="subtitle">
+            Bridge the gap between theory and industry reality.
+        </p>
+
+        <div class="tech-divider"></div>
+
+        <div class="tech-badges">
+            <span class="badge">🤖 AI/ML</span>
+            <span class="badge">📊 DATA</span>
+            <span class="badge">⚙️ LEARNING</span>
+        </div>
+
+        <div class="details-box">
+            📅 <strong>26 APRIL, 2026</strong> <br /> 🕓 <strong>04:00 PM - 05:00 PM</strong>
+        </div>
+
+        <form id="registrationForm">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" required placeholder="Enter your full name" />
+
+            <label for="college">College / Institution</label>
+            <input type="text" id="college" required placeholder="Enter your college or institution name" />
+
+            <label for="semester">Degree / Semester</label>
+            <select id="semester" required>
+          <option value="">Select your semester...</option>
+          <option value="M.Sc.CS">M.Sc.CS</option>
+          <option value="B.Sc.CS">B.Sc.CS</option>
+          <option value="BCA">BCA</option>
+          <option value="B.Tech">B.Tech</option>
+          <option value="M.Tech">M.Tech</option>
+          <option value="Other">Other</option>
+        </select>
+
+            <label for="whatsapp">WhatsApp Number</label>
+            <input type="tel" id="whatsapp" required placeholder="Enter Your Whatsapp Number" />
+
+            <button type="submit" id="submitBtn">Register & Join Group</button>
+        </form>
+
+        <p id="success-message">✓ Registration successful! Redirecting...</p>
+        <p class="footer-text">
+            SECURE DATA | ENCRYPTED TRANSMISSION | VERIFIED
+        </p>
+    </div>
+
+    <script>
+        document
+            .getElementById("registrationForm")
+            .addEventListener("submit", function(event) {
+                event.preventDefault();
+
+                const btn = document.getElementById("submitBtn");
+                const msg = document.getElementById("success-message");
+
+                btn.innerText = "Processing...";
+                btn.disabled = true;
+
+                const studentData = {
+                    name: document.getElementById("name").value,
+                    college: document.getElementById("college").value,
+                    semester: document.getElementById("semester").value,
+                    whatsapp: document.getElementById("whatsapp").value,
+                };
+
+                console.log("New Registration:", studentData);
+
+                setTimeout(() => {
+                    msg.style.display = "block";
+
+                    const whatsappGroupLink =
+                        "https://chat.whatsapp.com/JPGZ91VklI58ilugzREfhd";
+
+                    window.location.href = whatsappGroupLink;
+                }, 1200);
+            });
+    </script>
+</body>
+
+</html>
