@@ -666,14 +666,107 @@
         }
 
         @media (max-width: 560px) {
+            .page {
+                width: min(100% - 16px, 1160px);
+                padding-top: 14px;
+            }
+
+            .top-link {
+                width: 100%;
+                justify-content: center;
+                text-align: center;
+                padding: 10px 12px;
+                font-size: 12px;
+            }
+
             .form-panel,
             .info-panel {
-                padding: 20px;
+                padding: 16px;
+                border-radius: 18px;
+            }
+
+            .tag {
+                padding: 8px 10px;
+                font-size: 10px;
+                letter-spacing: 0.1em;
+            }
+
+            .form-panel h1,
+            .info-panel h2 {
+                max-width: none;
+                font-size: clamp(1.7rem, 8vw, 2.2rem);
+            }
+
+            .lead,
+            .step-copy,
+            .helper-copy,
+            .trust-line,
+            .info-panel p,
+            .event-card span,
+            .info-list li {
+                font-size: 13px;
+                line-height: 1.55;
+            }
+
+            .progress-wrap,
+            .urgency-card,
+            .mini-card,
+            .event-card {
+                padding: 12px;
+                border-radius: 14px;
+            }
+
+            .next-grid,
+            .event-grid,
+            .support-strip {
+                gap: 10px;
+            }
+
+            .urgency-card h2 {
+                font-size: clamp(1.15rem, 6vw, 1.5rem);
+            }
+
+            #timer {
+                font-size: clamp(1.15rem, 6vw, 1.6rem);
+            }
+
+            .progress-head strong,
+            .progress-head span,
+            .section-title,
+            .field-note,
+            .urgency-note {
+                font-size: 11px;
+            }
+
+            label {
+                font-size: 11px;
+            }
+
+            input,
+            textarea {
+                padding: 12px 13px;
+                font-size: 14px;
+                border-radius: 12px;
+            }
+
+            .mini-card strong,
+            .event-card strong {
+                font-size: 14px;
             }
 
             .step-actions {
                 flex-direction: column;
                 align-items: stretch;
+                padding-top: 12px;
+            }
+
+            .button,
+            .button-ghost {
+                min-height: 48px;
+                padding: 12px 14px;
+                border-radius: 14px;
+                font-size: 12px;
+                letter-spacing: 0.04em;
             }
 
             .progress-head {
@@ -681,9 +774,71 @@
                 align-items: flex-start;
             }
 
+            .support-strip {
+                display: none;
+            }
+
             .support-chip {
                 flex-direction: column;
                 align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .page {
+                width: min(100% - 12px, 1160px);
+                padding-top: 12px;
+            }
+
+            .top-link {
+                padding: 9px 10px;
+                font-size: 11px;
+            }
+
+            .form-panel,
+            .info-panel {
+                padding: 14px;
+                border-radius: 16px;
+            }
+
+            .form-panel h1,
+            .info-panel h2 {
+                font-size: clamp(1.5rem, 7.5vw, 1.9rem);
+            }
+
+            .lead,
+            .step-copy,
+            .helper-copy,
+            .trust-line,
+            .info-panel p,
+            .event-card span,
+            .info-list li {
+                font-size: 12px;
+                line-height: 1.5;
+            }
+
+            .progress-wrap,
+            .urgency-card,
+            .mini-card,
+            .event-card {
+                padding: 10px;
+                border-radius: 12px;
+            }
+
+            .mini-card strong,
+            .event-card strong {
+                font-size: 13px;
+            }
+
+            .button,
+            .button-ghost {
+                min-height: 46px;
+                font-size: 11px;
+            }
+
+            .info-list {
+                gap: 10px;
+                margin-top: 16px;
             }
         }
 
